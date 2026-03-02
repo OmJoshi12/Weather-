@@ -1,0 +1,39 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Production-ready full-stack weather application",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon backend/server.js",
+    "client": "cd frontend && npm start",
+    "client:js": "cd frontend-js && npm start",
+    "build": "cd frontend && npm run build",
+    "install-all": "npm install && cd frontend && npm install"
+  },
+  "keywords": [
+    "weather",
+    "api",
+    "react",
+    "nodejs",
+    "mongodb"
+  ],
+  "author": "Om Joshi",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mongoose": "^7.5.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "axios": "^1.5.0",
+    "helmet": "^7.0.0",
+    "express-rate-limit": "^6.10.0",
+    "joi": "^17.9.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1",
+    "concurrently": "^8.2.0"
+  }
+}
